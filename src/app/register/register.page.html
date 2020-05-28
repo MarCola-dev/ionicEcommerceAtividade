@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-back-button text="Voltar"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Cadastre-se</ion-card-subtitle>
+      <ion-card-title>E encontre ofertas incriveis</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input placeholder="Carlos Magno" name="name" [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input placeholder="email@email.com" type="email" name="email" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input placeholder="******" type="password" name="userPassword" [(ngModel)]="user.userPassword"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirme à senha</ion-label>
+        <ion-input placeholder="******" type="password" name="confirmPassword" [(ngModel)]="confirmPassword"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Idade</ion-label>
+        <ion-input placeholder="18" type="number" name="age" [(ngModel)]="user.age"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Endereço</ion-label>
+        <ion-input placeholder="Rua ABC, 14"  name="address" [(ngModel)]="user.address"></ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <h4>{{error}}</h4>
+      </ion-text>
+      
+      <ion-card>
+        <ion-button (click)="registerUser()" expand="block">Cadastrar</ion-button>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="end">
+      <ion-button (click)="logoff()">
+        <ion-icon slot="icon-only" name="power"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="container" [scrollEvents]="false" [fullscreen]="true">
+  <ion-card-header id="headerProducts">
+    <ion-card-title id="titleProduct">Produtos</ion-card-title>
+  </ion-card-header>
+      <ion-card *ngFor="let product of products">
+        <ion-card-header>
+          <ion-card-subtitle>{{product.factory.name.toUpperCase()}}</ion-card-subtitle>
+          <ion-card-title id="nameProduct">{{product.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content id="productPrice">
+          R${{product.price}}
+        </ion-card-content>
+        <ion-buttons >
+          <ion-button>
+            <ion-icon slot="icon-only" name="cart" color="tertiary"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-card> 
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+

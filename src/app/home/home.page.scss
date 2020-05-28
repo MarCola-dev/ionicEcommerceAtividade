@@ -1,0 +1,33 @@
+#headerTop {
+  background-color: #6200EE;
+}
+
+#container {
+  text-align: center;
+  align-items: center;
+}
+
+#titleProduct  {
+  color: black;
+
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+#container ion-card {
+  margin: 20px;
+  
+  box-shadow: 3px 3px #888888;
+  background-color: white;
+}
+
+#nameProduct {
+  color: black;
+
+  font-weight: bolder;
+}
+
+#productPrice {
+  color: green;
+  font-size: 16px;
+}
