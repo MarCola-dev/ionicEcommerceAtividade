@@ -20,20 +20,14 @@
         <ion-label position="floating">Senha</ion-label>
         <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
       </ion-item>
-      
+
       <ion-text color="danger">
         <h4>{{error}}</h4>
       </ion-text>
       <ion-card>
         <ion-button color="tertiary" (click)="logon()" expand="block">Entrar</ion-button>
+        <ion-button color="medium" (click)="goRegister()" expand="block">Não possui conta</ion-button>
       </ion-card>
     </ion-card-content>
-    <ion-card>
-      <ion-item button (click)="goRegister()">
-        <ion-label>
-          Cadastre-se
-        </ion-label>
-      </ion-item>
-    </ion-card>
   </ion-card>
 </ion-content>

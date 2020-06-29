@@ -4,10 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Repository } from '../service/repository';
 import { error } from '@angular/compiler/src/util';
 
-
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
